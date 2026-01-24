@@ -11,6 +11,15 @@
   --body-font: "Georgia", "Times New Roman", serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
 body {
   margin: 0;
   font-family: var(--body-font);
@@ -71,15 +80,21 @@ footer {
   color: var(--text-on-primary);
   border-top: 2px solid var(--accent-color);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   bottom: 0;
-  width: 100%;
   margin-top: 20px;
+}
+
+#legal-disclaimer {
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 footer p {
   font-family: var(--body-font);
+  font-size: 0.9rem;
 }
 
 /* Main Page Styles */
@@ -125,7 +140,6 @@ footer p {
   align-items: center;
 }
 .content h2 {
-  font-family: var(--heading-font);
   font-size: 2rem;
 }
 
@@ -145,19 +159,29 @@ footer p {
 
 .credentials {
   color: var(--text-on-primary);
-  margin: 15px;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid var(--accent-color);
   background-color: var(--primary-color);
   line-height: 1.25;
-  width: 100%;
-  max-width: 500px;
+  width: 90%;
+}
+
+.credentials h3 {
+  text-align: center;
 }
 
 .credentials ul {
   list-style-type: none;
   font-style: italic;
+}
+
+#credentials-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media screen and (min-width: 639px) {
@@ -192,7 +216,7 @@ footer p {
 
   #practice-areas {
     max-width: 640px;
-    margin: 30px auto;
+    margin: 0 auto;
   }
 
   #practice-areas li {
@@ -200,9 +224,26 @@ footer p {
   }
 
   footer {
-    justify-content: left;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 20px;
   }
-  footer p {
-    padding-left: 40px;
+
+  #legal-disclaimer {
+    font-size: smaller;
+    text-align: left;
+    max-width: 60%;
+  }
+
+  #credentials-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .credentials {
+    width: calc(100% / 2 - 40px);
   }
 }
