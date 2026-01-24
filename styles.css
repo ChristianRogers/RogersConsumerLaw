@@ -25,6 +25,9 @@ body {
   font-family: var(--body-font);
   background-color: var(--secondary-color);
   color: var(--text-on-secondary);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
@@ -39,6 +42,7 @@ header h1 {
   font-family: var(--heading-font);
   font-variant: small-caps;
   font-weight: normal;
+  margin-top: 0;
 }
 
 nav {
@@ -73,6 +77,7 @@ nav a {
 
 main {
   background-color: var(--secondary-color);
+  flex: 1;
 }
 
 footer {
@@ -83,18 +88,17 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  bottom: 0;
   margin-top: 20px;
-}
-
-#legal-disclaimer {
-  color: var(--secondary-color);
-  text-align: center;
 }
 
 footer p {
   font-family: var(--body-font);
   font-size: 0.9rem;
+}
+
+#legal-disclaimer {
+  color: var(--secondary-color);
+  text-align: center;
 }
 
 /* Main Page Styles */
@@ -121,6 +125,7 @@ footer p {
   text-align: center;
   padding: 20px;
   margin: 20px;
+  margin-bottom: 0;
   color: var(--text-on-primary);
   border-radius: 20px;
 }
@@ -158,11 +163,11 @@ footer p {
 }
 
 .credentials {
-  color: var(--text-on-primary);
+  color: var(--text-on-accent);
   padding: 10px;
   border-radius: 10px;
-  border: 2px solid var(--accent-color);
-  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  background-color: var(--accent-color);
   line-height: 1.25;
   width: 90%;
 }
@@ -216,7 +221,7 @@ footer p {
 
   #practice-areas {
     max-width: 640px;
-    margin: 0 auto;
+    margin: 40px auto;
   }
 
   #practice-areas li {
